@@ -1,6 +1,5 @@
 # Lawrence Beds MRP Software
 
-Project Name: Lawrence Beds MRP software
 The original goal for this project is listed below, followed by the future features that we hope to add to this project as it grows.
 
 # MVP: 
@@ -34,3 +33,5 @@ We will be adopting a MERN stack for this project, we will be using TypeScript a
 - Scheduling feature
     - This feature would streamline the process making deliveries to clients
     - User can create, view, update and delete an order
+
+hey
