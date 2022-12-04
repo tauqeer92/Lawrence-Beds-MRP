@@ -35,5 +35,5 @@ We will be adopting a MERN stack for this project, we will be using TypeScript a
     - User can create, view, update and delete an order
 
 # Getting setup
-- To start the backend server you will require an dotenv file the following env vars:
+- To start the backend server you will require a dotenv file the following env vars:
     - PORT
