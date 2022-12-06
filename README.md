@@ -20,7 +20,7 @@ We will be adopting a MERN stack for this project, we will be using TypeScript a
 [React](https://reactjs.org/) - This will be used to design our frontend
 
 ### Node
-[Node](https://nodejs.org/en/) - This will be the language for backend api used alongside express
+[Node](https://nodejs.org/en/) - We are using v18.12.1. This will be the language for backend api used alongside express
 
 # Future Features:
 - Being able to assess viability of new products
