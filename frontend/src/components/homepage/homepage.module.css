@@ -1,0 +1,13 @@
+.mattress-builder-img {
+    position: relative;
+    height: 500;
+    left: 200px;
+    bottom: 100px;
+    top: 100px;
+}
+
+.view-all-mattresses-img {
+    position: absolute;
+    left: 900px;
+    top: 160px;
+}
