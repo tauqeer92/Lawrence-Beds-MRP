@@ -11,8 +11,8 @@ export type Material = {
 	supplierId: String;
 	name: String;
 	price: Number;
-	description: String;
 	currency: CurrencyType;
+	description?: String;
 };
 
 export interface MaterialModel extends Material, Document {}
