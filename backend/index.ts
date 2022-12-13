@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors'
 import mongoose from 'mongoose'
-// import materialRoutes from './routes/materials.route'
+import materialRoutes from './routes/materials.route'
 import createMaterialHandler, { getMaterialHandler } from "./controllers/materials.controller";
 
 dotenv.config();
@@ -13,6 +13,7 @@ const port = process.env.PORT;
 // app.use('/api', materialRoutes)
 
 app.use(cors());
+app.use(express.json())
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
@@ -20,7 +21,8 @@ app.get('/', (req: Request, res: Response) => {
 app.get('/yoo', (req: Request, res: Response) => {
   res.send('Hi')
 });
-app.get("/material", getMaterialHandler);
+materialRoutes(app)
+// app.get("/material", getMaterialHandler);
 app.post('/create', createMaterialHandler, (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
 });
