@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getMaterial = void 0;
+exports.getAllMaterials = void 0;
 const material_model_1 = require("../models/material.model");
-const getMaterial = async () => {
+const getAllMaterials = async () => {
     return material_model_1.Material.find();
 };
-exports.getMaterial = getMaterial;
+exports.getAllMaterials = getAllMaterials;
 const createMaterial = async (input) => {
     return await material_model_1.Material.create(input);
 };

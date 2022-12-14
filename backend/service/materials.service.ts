@@ -1,15 +1,12 @@
 import express, {Request, Response } from "express";
 import  {Material} from "../models/material.model";
-import { DocumentDefinition } from "mongoose";
 
-export const getMaterial = async () => {
+export const getAllMaterials = async () => {
   return Material.find()
-
 }
 
 const createMaterial = async (input: any) => {
-    
-        return await Material.create(input)
+    return await Material.create(input)
 }
 
 

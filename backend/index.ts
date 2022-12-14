@@ -3,35 +3,28 @@ import dotenv from 'dotenv';
 import cors from 'cors'
 import mongoose from 'mongoose'
 import materialRoutes from './routes/materials.route'
-import createMaterialHandler, { getMaterialHandler } from "./controllers/materials.controller";
+import mattressRoutes from './routes/mattresses.route';
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT;
 
-// app.use('/api', materialRoutes)
+// Middleware
 
 app.use(cors());
 app.use(express.json())
 
+// Routes
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
 });
-app.get('/yoo', (req: Request, res: Response) => {
-  res.send('Hi')
-});
+
+
 materialRoutes(app)
-// app.get("/material", getMaterialHandler);
-app.post('/create', createMaterialHandler, (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
-});
-app.get('/hello', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
-});
+mattressRoutes(app)
 
-
-// materialRoutes(app)
 
 mongoose.connect(process.env.MONGO_URI ?? '')
   .then(() => {

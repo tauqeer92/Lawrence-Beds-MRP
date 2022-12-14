@@ -8,28 +8,19 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const materials_route_1 = __importDefault(require("./routes/materials.route"));
-const materials_controller_1 = __importDefault(require("./controllers/materials.controller"));
+const mattresses_route_1 = __importDefault(require("./routes/mattresses.route"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
-// app.use('/api', materialRoutes)
+// Middleware
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
+// Routes
 app.get('/', (req, res) => {
     res.send('Express + TypeScript Server');
 });
-app.get('/yoo', (req, res) => {
-    res.send('Hi');
-});
 (0, materials_route_1.default)(app);
-// app.get("/material", getMaterialHandler);
-app.post('/create', materials_controller_1.default, (req, res) => {
-    res.send('Express + TypeScript Server');
-});
-app.get('/hello', (req, res) => {
-    res.send('Express + TypeScript Server');
-});
-// materialRoutes(app)
+(0, mattresses_route_1.default)(app);
 mongoose_1.default.connect(process.env.MONGO_URI ?? '')
     .then(() => {
     app.listen(port, () => {
