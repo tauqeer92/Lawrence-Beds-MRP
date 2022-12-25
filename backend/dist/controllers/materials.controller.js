@@ -9,6 +9,7 @@ const MaterialController = {
     Index: async (req, res) => {
         const materials = await (0, materials_service_2.getAllMaterials)();
         res.json({ materials });
+        console.log(materials);
     },
     Create: async (req, res) => {
         const material_data = { name: req.body.name, price: req.body.price, description: req.body.description };

@@ -8,6 +8,7 @@ const MaterialController = {
 	Index: async (req: Request, res: Response) => {
 		const materials = await getAllMaterials()
 		res.json({materials})
+		console.log(materials)
     },
 
 	Create: async (req: Request, res: Response) => {

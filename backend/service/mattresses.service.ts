@@ -7,3 +7,7 @@ export const getAllMattresses = async () => {
 export const createMattress = async (input: any) => {
     return await Mattress.create(input)
 }
+
+export const deleteMattress = async (input: any) => {
+    Mattress.deleteOne(input)
+}
